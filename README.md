@@ -5,6 +5,7 @@ Some concepts to explore here:
   - Block styles
   - Block patterns
   - Block variations
+  - Block editor template parts
   - Simple custom block without ACF
   - Is there good core support for repeaters without ACF yet?
   - Create Block Theme [plugin](https://wordpress.org/plugins/create-block-theme/)
