@@ -14,12 +14,20 @@
  */
 function fsedemo_register_block_styles() {
 
-	// register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
-	// 	'core/button',
-	// 	array(
-	// 		'name'  => 'fsedemo-flat-button',
-	// 		'label' => __( 'Flat' ),
-	// 	)
-	// );
+	register_block_style(
+		'core/heading',
+		array(
+			'name'  => 'fsedemo-bordered-heading',
+			'label' => __( 'With Border' ),
+		)
+	);
+
+	register_block_style(
+		'core/heading',
+		array(
+			'name'  => 'fsedemo-bubble-heading',
+			'label' => __( 'With Bubble' ),
+		)
+	);
 }
 add_action( 'init', 'fsedemo_register_block_styles' );
