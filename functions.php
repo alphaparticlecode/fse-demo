@@ -30,6 +30,15 @@ function fsedemo_setup() {
 }
 add_action( 'after_setup_theme', 'fsedemo_setup' );
 
+function fsedemo_enqueue_block_variations() {
+    wp_enqueue_script( 
+        'fsedemo-enqueue-block-variations', 
+        get_template_directory_uri() . '/assets/js/variations.js', 
+        array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ) 
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'fsedemo_enqueue_block_variations' );
+
 /**
  * Enqueue the CSS files.
  *
