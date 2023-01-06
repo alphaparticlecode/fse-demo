@@ -1,1 +1,30 @@
-{}
+{
+	"version": 2,
+	"settings": {
+	    "color": {
+	    	"defaultPalette": false,
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#470B46",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#8937D1",
+					"name": "Secondary"
+				},
+				{
+					"slug": "base",
+					"color": "#fff",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#3CB8FE",
+					"name": "Contrast"
+				}
+			]
+	    }
+	}
+}

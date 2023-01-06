@@ -1,0 +1,26 @@
+.is-style-fsedemo-bubble-heading:before {
+  content: '';
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse style='fill: none; stroke: rgb(171, 202, 188); stroke-width: 1px' cx='10' cy='10' rx='8' ry='8'%3E%3C/ellipse%3E%3Cellipse style='stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(171, 202, 188)' cx='10' cy='10' rx='6' ry='6'%3E%3C/ellipse%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse style='fill: none; stroke: rgb(171, 202, 188); stroke-width: 1px' cx='10' cy='10' rx='8' ry='8'%3E%3C/ellipse%3E%3Cellipse style='stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(171, 202, 188)' cx='10' cy='10' rx='6' ry='6'%3E%3C/ellipse%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  background-color: var(--wp--preset--color--secondary);
+  display: inline-block;
+  height: 16px;
+  width: 14px;
+  margin-right: 5px;
+}
+
+.is-style-fsedemo-bubble-heading {
+	text-transform: uppercase;
+}
+
+.is-style-fsedemo-bordered-heading {
+	border-left: 4px solid var(--wp--preset--color--secondary);
+	padding-left: 6px;
+	text-transform: uppercase;
+}
