@@ -32,10 +32,25 @@ When one of these styles is selected, the only change to the actual markup that 
 
 One drawback of Block Styles is that, depending on which CSS properties are affected by the style, certain Block Editor controls can conflict with the styling provided by the theme author. For example, if your Block Style dictates a background color, this will conflict with the background color control in the editor. If you are looking to control block editor attributes that already have editor controls, one of the other block paradigms, such as Block Variations, might be a better fit for your use case.
 
-## Future Sections
+## Block Variations
+
+[Block Variations](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/) are particularly useful for when you need different functionality or layout than an existing block, but not so much that creating an entirely new block would make sense. In addition, Block Variations can be used when you want to offer the user a block with a different style, but by having those styles still configurable in the editor instead of hardcoded with CSS like we discussed in the Block Styles section above.
+
+In this theme, we define a variation on the [Media & Text block](https://wordpress.org/support/article/media-text-block/). Block variations are [defined in Javascript](https://github.com/alphaparticlecode/fse-demo/blob/main/assets/js/variations.js), with the various configuration options and attributes passed in as an object to the `registerBlockVariation` function.
+
+We are often asked to build 50/50 layouts for our clients where there is an image on one side and a container of text consisting of a heading, paragraph and a call-to-action button on the other. This can be created manually with the media and text block by assembling all the inner blocks. However, with a block variation (that we are calling the AP 50/50 block) all of those inner blocks, along with a pre-defined background color and text colors, are already configured and are inserted as-is when the block variation is inserted.
+
+<img width="409" alt="A screenshot of the AP 50/50 block variation appearing in the block inserter" src="https://user-images.githubusercontent.com/2965444/211171106-010d37e7-14b0-4acb-a571-cf75831985f7.png">
+
+Block variations appear in the block inserter and differ from block styles in that, while attributes _can_ be pre-configured, they can still be changed by the user once inserted. For example, in our block variation, we define the image to have 50% width and the container of text to have the other 50% of the width of the block.
+
+<img width="1440" alt="An example of our AP 50/50 block variation inserted with some of the block attributes pre-defined" src="https://user-images.githubusercontent.com/2965444/211171247-770632e5-b389-441a-b8a2-51cd186dcad1.png">
+
+However, once the user inserted our variation, if they wanted to change the image width to 75% and have the text take up just 25% of the width, they could do that without affecting any other blocks on the site. This is what makes block variations so powerful for quickly assembling layouts without restricting the ability to customize them.
+
+### Future Sections
 
 Some concepts to explore here:
-  - Block variations
   - Block patterns
   - Block editor template parts
   - Simple custom block without ACF
