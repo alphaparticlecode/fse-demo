@@ -18,12 +18,21 @@ Per [Rich Tabor's suggestion](https://richtabor.com/standardizing-theme-json-col
 background-color: var(--wp--preset--color--secondary);
 ```
 
+This is very useful because it gives us a standard that we can use when defining Block Styles and some of the other styles around our theme. It also allows us to change color schemes quickly and globally, as is often required when a client is rebranding.
+
 ## Block Styles
 
+Block Styles allow theme developers to provide style customization options without having to force content creators to add CSS classes manually or configure a ton of block options.
 
+In this theme, we [register two block styles](https://github.com/alphaparticlecode/fse-demo/blob/main/inc/register-block-styles.php) as part of the `core/heading` block: "With Border" and "With Bubble". Once registered, these styles will show up when the block they are registered to is selected.
 
+<img width="1440" alt="A screenshot showing how the block style controls are presented in the block editor" src="https://user-images.githubusercontent.com/2965444/211170223-638c105e-3d98-4271-9f95-2d4c6ffc7b7f.png">
 
-## Scratchpad
+When one of these styles is selected, the only change to the actual markup that happens is that a CSS class gets applied. In the case of our "With Bubble" style, the CSS class `is-style-fsedemo-bubble-heading` is applied. However, for the style to have any frontend difference from the default block appearance, CSS has to be [written for each of these classes](https://github.com/alphaparticlecode/fse-demo/blob/main/assets/css/src/block-styles.css). Once this CSS is in place, the frontend output will changed based on which Block Style is selected in the editor.
+
+One drawback of Block Styles is that, depending on which CSS properties are affected by the style, certain Block Editor controls can conflict with the styling provided by the theme author. For example, if your Block Style dictates a background color, this will conflict with the background color control in the editor. If you are looking to control block editor attributes that already have editor controls, one of the other block paradigms, such as Block Variations, might be a better fit for your use case.
+
+## Future Sections
 
 Some concepts to explore here:
   - Block variations
